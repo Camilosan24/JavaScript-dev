@@ -1,0 +1,29 @@
+.cen{
+    font-size: 1em;
+    text-align: center;
+}
+
+div>h3{
+   
+    font-size: 1em;
+}
+
+.caja{
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 5px;
+}
+
+.green{
+    color: rgb(4, 163, 4);
+}
+
+.descripcion{
+    font-size: 0.8em;
+    color: rgb(158, 157, 157);
+}
+
+.precios{
+    float: right;
+    margin-bottom: 3px;
+    color: rgb(158, 157, 157);
+}
