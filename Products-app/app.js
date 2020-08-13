@@ -18,7 +18,7 @@ class UI{
                 <strong>Product price</strong>:${product.price}
                 <strong>Product year</strong>:${product.year}
             </div>
-        </div>`;  
+        </div>`;
         productList.appendChild(element);
     }
 

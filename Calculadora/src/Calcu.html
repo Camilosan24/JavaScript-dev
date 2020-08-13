@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
+
+    <title>Calculadora</title>
+</head>
+<body>
+<div class="container mt-3 col-md-5">
+    <div id="commits"></div>
+    <div class="card">
+        <div class="card-header">
+            <h4>Calculadora</h4>
+        </div>
+        <form class="card-body" id="form-cal">
+            <label for="Nombre" class="form-control-label">Numero 1:</label>
+            <input type="text" id="num1" class="form-control mb-3">
+            <label for="Apellidos" class="form-control-label">Numero 2:</label>
+            <input type="text" id="num2" class="form-control mb-3" >
+            <div class="card-body" id="botones">
+                <button name="button" type="submit" class="btn  btn-primary btn-block" value="1">Sumar</button>
+                <button name="button" type="submit" class="btn  btn-primary btn-block" value="2">Restar</button>
+                <button name="button" type="submit" class="btn  btn-primary btn-block" value="3">Multiplicar</button>
+                <button name="button" type="submit" class="btn  btn-primary btn-block" value="4">Dividir</button>
+                <script name="button" src="./app/index.js" type="module"></script>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="bt btn btn-block">
+            <h1>Resultados</h1>
+        </div>
+    </div>
+        <div id="resultados"></div>
+    <a href="../index.html" class="btn btn-block btn-secondary mt-5">Regresar</a>
+</div>
+</body>
+</html>
