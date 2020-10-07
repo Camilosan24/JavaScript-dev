@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #F4F4F4;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#tittle{
+    background: #121E20;
+    padding: 25px 0px 15px 25px;
+    font-size: xx-large;
+    color: white;
+}
+
+.contenedor{
+    display: flex;
+    margin: 2%;
+    height:78vh;
+}
+
+section{
+    width: 50%;
+    background: white;
+    padding: 5px;
+    margin-right: 5%;
+}
+
+aside{
+    width: 40%;
+    height: auto;
+}
+
+table{
+    width: 100%;
+}
+th{
+    width: 25%;
+    padding: 2% 0;
+    background-color: rgba(55, 90, 127, 1);
+    color: white;
+    font-size: 15px;
+}
+
+
+form{
+    height: 100%;
+    width: 100%;
+}
+input{
+    width: 90%;
+    padding: 3% 5%;
+}
+
+input[type="text"]{
+    margin-bottom: 2vh;
+    background: #F4F4F4;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+input[type="text"]:hover{
+    box-shadow: 5px 5px 2px 1px #CDCDCD;
+
+}
+
+input[type="text"]:focus{
+    outline: none;
+    background: #F9F9F9;
+    box-shadow: none;
+}
+
+input[type="submit"]{
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgba(55, 90, 127, 1);
+    border-color: #375a7f;
+    color: white;
+}
+
+input[type="submit"]:hover{
+    border: none;
+    background-color: rgba(55, 90, 127, 1);
+    box-shadow: 5px 5px 5px 5px rgba(55, 90, 127, 0.4);;
+}
+
+@media screen and (max-width: 1038px){
+
+    .contenedor{
+        display: block;
+    }
+    section{
+        width: 100%;
+        height: 80vh;
+        margin-bottom: 100px;
+    }
+
+    aside{
+        width: 100%
+    }
+}
