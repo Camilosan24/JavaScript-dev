@@ -16,7 +16,7 @@ document.getElementById('botones').addEventListener('click',(e)=>{
     const numero2 = parseInt(document.getElementById('num2').value);
     const option = parseInt(e.target.value);
 
-    if(!isNaN(numero1) || !isNaN(numero2)){
+    if(!isNaN(numero1) && !isNaN(numero2)){
 
         const id = store.getId();
         const process = new Process(id,numero1,numero2);
@@ -44,16 +44,17 @@ document.getElementById('botones').addEventListener('click',(e)=>{
 
 div.addEventListener('click',(e)=>{
 
-    ui.deleteRender(e);
-    store.deleteLocalStorage(e);
-
-    commit.innerHTML=`<div class="btn btn-block btn-danger text-center">Elemento eliminado</div>`;
-
+    const eliminar = confirm('Esta seguro de eliminar esta elemento?')
+    if(eliminar){
+        ui.deleteRender(e);
+        store.deleteLocalStorage(e);
+        commit.innerHTML=`<div class="btn btn-block btn-danger text-center">Elemento eliminado</div>`;
         setTimeout(()=>{
             commit.remove();
             location.reload(true);
         },3000)
         e.preventDefault();
+    }
 })
 
 
