@@ -37,12 +37,18 @@ table{
     width: 100%;
 }
 th{
-    width: 25%;
+    width: 20%;
     padding: 2% 0;
     background-color: rgba(55, 90, 127, 1);
     color: white;
     font-size: 15px;
 }
+
+td{
+    text-align: center;
+    padding: 10px;
+}
+
 
 
 form{
@@ -52,6 +58,7 @@ form{
 input{
     width: 90%;
     padding: 3% 5%;
+    font-size: 16px;
 }
 
 input[type="text"]{
@@ -86,6 +93,57 @@ input[type="submit"]:hover{
     border: none;
     background-color: rgba(55, 90, 127, 1);
     box-shadow: 5px 5px 5px 5px rgba(55, 90, 127, 0.4);;
+}
+
+.delete-link{
+    color: white;
+}
+
+.campo{
+    color: white;
+}
+
+.delete-input{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    background: red;
+    border-radius: 5px;
+    outline: none;
+}
+
+.delete-input:hover{
+    background: rgb(163, 0, 0);
+}
+
+.delete-link{
+    color: white;
+}
+
+.campo{
+    color: white;
+}
+
+.edit-input{
+    margin-top: 5px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    background: rgb(35, 106, 187);
+    border-radius: 5px;
+    outline: none;
+}
+
+.edit-link{
+    color: white;
+}
+
+.edit-input:hover{
+    background: rgb(22, 40, 199);
 }
 
 @media screen and (max-width: 1038px){

@@ -1,0 +1,16 @@
+<%- include('./partials/header.ejs')%>
+      <link rel="stylesheet" href="css/edit-styles.ejs">
+<%- include('./partials/nav.ejs')%>
+      <aside>
+         <h2>Editar Estudiante</h2><br>
+         <form action="/edit-person" method="POST">
+            <label for="Name">Nombres:</label><br>
+            <input id="name" name="name" type="text" autocomplete="off" value="<%= bigData.nombres%>"><br>
+            <label for="Apellido">Apellidos:</label><br>
+            <input id="lastName" name="lastName" type="text" autocomplete="off" value="<%= bigData.apellidos %>"><br>
+            <label for="Numero">Nº Telefono:</label><br>
+            <input id="number" name="number" type="text" autocomplete="off" value="<%= bigData.telefono %>"><br>
+            <input type="submit" class="envio" id="enviar"></input>
+         </form>
+      </aside>
+<%- include('./partials/footer.ejs')%>

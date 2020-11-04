@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="public/styles.css">
-</head>
-<body>
-    <nav>
-        <h3 id="tittle" class="">Estudiantes de ADSI</h3>
-    </nav>
-    <div class="contenedor">
+<%- include('./partials/header.ejs')%>
+<%- include('./partials/nav.ejs')%>
+
         <section>
             <table>
                 <thead>
@@ -19,9 +9,26 @@
                         <th>Nombres</th>
                         <th>Apellidos</th>
                         <th>Nº Telefono</th>
+                        <th>opciones</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <% if(bigData) {%>
+                        <% for(data of bigData) {%>
+                            <tr>
+                                <td><%= data.id%></td>
+                                <td><%= data.nombres%></td>
+                                <td><%= data.apellidos%></td>
+                                <td><%= data.telefono%></td>
+                                <td class="campo">
+                                    <a href="/delete-person/<%= data.id %>" class="delete-link"><input type="button" value="Eliminar" class="delete-input"></a>
+                                    <a href="/edit-person/<%= data.id %>" class="edit-link"><input type="button" value="Editar" class="edit-input"></a>
+                                </td>
+                            </tr>
+                        <% } %>
+                    <% } else {%>
+                        <H1>Not Data Found</H1>
+                    <% } %>
 
                 </tbody>
             </table>
@@ -29,16 +36,15 @@
         <aside>
 
             <h2>Formulario de inscripcion</h2><br>
-            <form>
+            <form action="/create-person" method="POST">
                 <label for="Name">Nombres:</label><br>
-                <input id="name" name="name" type="text"><br>
+                <input id="name" name="name" type="text" autocomplete="off"><br>
                 <label for="Apellido">Apellidos:</label><br>
-                <input id="lastName" name="lastName" type="text"><br>
+                <input id="lastName" name="lastName" type="text" autocomplete="off"><br>
                 <label for="Numero">Nº Telefono:</label><br>
-                <input id="number" name="number" type="text"><br>
-                <input type="submit" class="envio" id="enviar"></input>
+                <input id="number" name="number" type="text" autocomplete="off"><br>
+                <input type="submit" class="envio" id="enviar" ></input>
             </form>
         </aside>
-    </div>
-</body>
-</html>
+
+<%- include('./partials/footer.ejs')%>
